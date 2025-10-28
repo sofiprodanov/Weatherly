@@ -1,31 +1,44 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  justify-content: flex-start;
+  background-color: #0f172a;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.navList {
+.searchContainer {
   display: flex;
-  gap: 1.5rem;
-  list-style: none;
+  align-items: center;
+  background-color: #1e293b;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  transition: box-shadow 0.2s ease;
 }
 
-.navList li {
-  cursor: pointer;
-  font-weight: 500;
-  transition: opacity 0.2s ease;
+.searchContainer:hover {
+  box-shadow: 0 0 0 2px #38bdf8;
 }
 
-.navList li:hover {
-  opacity: 0.8;
+.icon {
+  color: #94a3b8;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #e2e8f0;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.input::placeholder {
+  color: #94a3b8;
 }

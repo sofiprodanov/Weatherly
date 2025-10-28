@@ -1,18 +1,19 @@
 import styles from "./Navbar.module.css";
+import { FiSearch } from "react-icons/fi";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <header className={styles.navbar}>
-      <h1 className={styles.logo}>Weather Web</h1>
-      <nav>
-        <ul className={styles.navList}>
-          <li>Inicio</li>
-          <li>Ciudades</li>
-          <li>Favoritos</li>
-        </ul>
-      </nav>
+      <div className={styles.searchContainer}>
+        <FiSearch className={styles.icon} />
+        <input
+          type="text"
+          placeholder="Buscar provincia o localidad..."
+          className={styles.input}
+        />
+      </div>
     </header>
   );
-}
+};
 
 export default Navbar;

@@ -1,0 +1,32 @@
+.layout {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 100vh;
+  background-color: #0b1221;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  background-color: #141c2e;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #1e2a44;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  padding: 1rem 2rem;
+}
+
+.content {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

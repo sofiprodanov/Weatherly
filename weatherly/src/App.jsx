@@ -1,17 +1,15 @@
-import Navbar from "./components/Navbar/Navbar";
-import Container from "./components/Container/Container";
-import CityList from "./components/CityList/CityList";
+import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home";
+import "./styles/globals.css";
 
+/**
+ * - Renderiza el Layout y dentro de él la página principal (Home).
+ */
 function App() {
   return (
-    <>
-      <Navbar />
-      <Container>
-        <h2>Bienvenida a Weather Web ☁️</h2>
-        <p>Clima actual de provincias argentinas:</p>
-        <CityList />
-      </Container>
-    </>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
 
