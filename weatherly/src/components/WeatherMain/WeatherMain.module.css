@@ -1,38 +1,45 @@
 .weatherMain {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(145deg, #1e293b, #0f172a);
+  flex-direction: column;
   border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 0rem 0.7rem;
   color: #fff;
+  margin-bottom: -2rem;
 }
 
-.left {
+.top {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
 .city {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin: 0;
 }
 
 .condition {
   font-size: 1rem;
   color: #94a3b8;
+  margin: 0;
 }
 
-.right {
+.bottom {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 .temperature {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #f8fafc;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  margin-top: -7rem;
 }

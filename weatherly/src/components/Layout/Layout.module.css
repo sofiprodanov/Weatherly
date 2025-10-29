@@ -1,19 +1,25 @@
 .layout {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 100vh;
   background-color: #0b1221;
   color: #fff;
   font-family: "Poppins", sans-serif;
+  padding: 1rem; 
+  gap: 1rem;
 }
 
 .sidebar {
   background-color: #141c2e;
-  padding: 1rem 0;
+  border-radius: 16px; 
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid #1e2a44;
+  border-right: none; 
+  height: fit-content; 
+  width: 80px; 
+  margin-top: 0.2rem; 
 }
 
 .main {
@@ -21,11 +27,10 @@
   flex-direction: column;
   width: 100%;
   overflow-y: auto;
-  padding: 1rem 2rem;
 }
 
 .content {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

@@ -1,5 +1,5 @@
 import styles from "./AirConditions.module.css";
-import { WiRaindrops, WiHumidity, WiStrongWind, WiThermometer } from "react-icons/wi";
+import { WiRaindrop, WiHumidity, WiStrongWind, WiThermometer } from "react-icons/wi";
 import { airConditionsMock } from "../../data/airConditionsMock";
 
 const AirConditions = () => {
@@ -9,7 +9,7 @@ const AirConditions = () => {
     <section className={styles.airConditions}>
       <h3 className={styles.title}>Condiciones del aire</h3>
 
-      <div className={styles.grid}>
+      <div className={styles.flex}>
         <div className={styles.item}>
           <WiThermometer size={40} color="#facc15" />
           <div>
@@ -35,9 +35,9 @@ const AirConditions = () => {
         </div>
 
         <div className={styles.item}>
-          <WiRaindrops size={40} color="#3b82f6" />
+          <WiRaindrop size={50} color="#3b82f6" />
           <div>
-            <p className={styles.label}>Prob. de lluvia</p>
+            <p className={styles.label}>Probabilidad de lluvia</p>
             <p className={styles.value}>{rain_probability}%</p>
           </div>
         </div>
