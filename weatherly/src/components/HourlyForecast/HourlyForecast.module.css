@@ -1,29 +1,40 @@
 .hourlyForecast {
   background: linear-gradient(145deg, #1e293b, #0f172a);
   border-radius: 16px;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0rem;
-  margin-top: 0;
   color: #cbd5e1;
+  margin-top: -0.2rem;
 }
 
 .list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow-x: auto;
+  scrollbar-width: auto;
 }
 
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px; 
+  min-width: 70px;
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, rgba(56, 70, 94, 0.8), rgba(25, 35, 58, 0.9));
 }
 
 .hour {

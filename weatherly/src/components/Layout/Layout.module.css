@@ -1,7 +1,6 @@
 .layout {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 100vh;
+  grid-template-columns: 70px 1fr;
   background-color: #0b1221;
   color: #fff;
   font-family: "Poppins", sans-serif;
@@ -16,21 +15,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: none; 
   height: fit-content; 
-  width: 80px; 
-  margin-top: 0.2rem; 
+  border-right: 1px solid #1e2a44; 
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  overflow-y: auto;
 }
 
 .content {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
