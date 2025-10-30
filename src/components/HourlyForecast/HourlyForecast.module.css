@@ -52,7 +52,7 @@
   margin-top: 0.2rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== DISEÑO RESPONSIVO  ===== */
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -108,7 +108,7 @@
   }
 }
 
-/* Scrollbar styling para mejor experiencia móvil */
+/* Scrollbar para celular */
 .list::-webkit-scrollbar {
   height: 6px;
 }

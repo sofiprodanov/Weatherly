@@ -8,14 +8,14 @@ body {
   font-family: 'Fredoka', 'Parkinsans', 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; /* Prevenir scroll horizontal */
+  overflow-x: hidden; 
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Mejoras para responsive */
+/* Mejoras para diseño responsivo */
 html {
   height: 100%;
 }
