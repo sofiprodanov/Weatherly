@@ -1,28 +1,32 @@
 import styles from "./Sidebar.module.css";
-import { WiDaySunny, WiCloudy, WiStrongWind } from "react-icons/wi";
+import { WiCloudy, WiStrongWind } from "react-icons/wi";
 import { FaMapMarkedAlt, FaCog } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
     <nav className={styles.sidebar}>
       <div className={styles.logo}>
-        <WiDaySunny size={36} />
+        <img 
+          src="/iconweatherly.svg" 
+          alt="Weatherly" 
+          className={styles.logoIcon}
+        />
       </div>
 
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <WiCloudy size={28} />
+          <WiCloudy className={styles.menuIcon} />
         </li>
         <li className={styles.menuItem}>
-          <WiStrongWind size={28} />
+          <WiStrongWind className={styles.menuIcon} />
         </li>
         <li className={styles.menuItem}>
-          <FaMapMarkedAlt size={22} />
+          <FaMapMarkedAlt className={styles.menuIcon} />
         </li>
       </ul>
 
       <div className={styles.settings}>
-        <FaCog size={22} />
+        <FaCog className={styles.settingsIcon} />
       </div>
     </nav>
   );

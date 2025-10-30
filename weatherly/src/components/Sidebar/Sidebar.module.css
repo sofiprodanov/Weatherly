@@ -5,13 +5,24 @@
   align-items: center;
   background-color: #141c2e;
   border-radius: 16px; 
-  padding: 0rem 1rem;
+  padding: 1rem 0.5rem;
   min-height: 710px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
-  color: #ffd166;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px; 
 }
 
 .menu {
@@ -22,25 +33,56 @@
   flex-direction: column;
   gap: 2rem;
   flex: 1;
+  width: 100%;
+  align-items: center;
 }
 
 .menuItem {
   color: #8ba1c5;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 8px;
 }
 
 .menuItem:hover {
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menuItem svg {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .settings {
   color: #8ba1c5;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 8px;
 }
 
 .settings:hover {
   color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Control directo del SVG del ícono de ajustes */
+.settings svg {
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
 }

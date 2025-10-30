@@ -6,9 +6,10 @@
   font-family: "Poppins", sans-serif;
   padding: 1rem; 
   gap: 1rem;
+  height: 100vh;
 }
 
-.sidebar {
+.sidebarContainer {
   background-color: #141c2e;
   border-radius: 16px; 
   padding: 1.5rem 1rem;
@@ -22,11 +23,46 @@
 .main {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.navbarContainer {
+  flex: 1;
+  max-width: 810px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ffd166;
+  font-size: 1.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-right: 7rem;
+}
+
+.logoText {
+  background: linear-gradient(135deg, #ffd166, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .content {
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1;
 }

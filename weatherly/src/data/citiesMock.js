@@ -67,8 +67,8 @@ export const citiesMock = [
   },
   {
     id: 3,
-    city: "Cordoba",
-    province: "Cordoba",
+    city: "Córdoba",
+    province: "Córdoba",
     temperature: 14,
     condition: "Nublado y fresco",
     icon: "cloudy",
