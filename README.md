@@ -138,4 +138,4 @@ npm run build
 
 ## Licencia
 
-Este proyecto es **Open Source** bajo licencia MIT.
+Este proyecto es **Open Source** bajo licencia MIT en el archivo [LICENSE](LICENSE).
