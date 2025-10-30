@@ -1,13 +1,5 @@
 import styles from "./HourlyForecast.module.css";
-import {
-  WiDaySunny,
-  WiCloudy,
-  WiRain,
-  WiNightClear,
-  WiNightAltCloudy,
-  WiSunset,
-  WiSunrise, // ícono de amanecer
-} from "react-icons/wi";
+import { WiDaySunny, WiCloudy, WiRain, WiNightClear, WiNightAltCloudy, WiSunset, WiSunrise } from "react-icons/wi";
 import { useWeather } from "../../context/WeatherContext";
 
 const HourlyForecast = () => {
@@ -17,17 +9,17 @@ const HourlyForecast = () => {
   const renderIcon = (icon, hour) => {
     const hourNumber = parseInt(hour.split(":")[0]);
 
-    // Determinar franja horaria
-    const isSunrise = hourNumber >= 5 && hourNumber < 7;  // 5 a 6
-    const isDay = hourNumber >= 7 && hourNumber < 17;     // 7 a 16
-    const isSunset = hourNumber >= 17 && hourNumber < 20; // 17 a 19
-    const isNight = hourNumber >= 20 || hourNumber < 5;   // 20 a 4
+    // Franja horaria
+    const isSunrise = hourNumber >= 5 && hourNumber < 7;
+    const isDay = hourNumber >= 7 && hourNumber < 17;    
+    const isSunset = hourNumber >= 17 && hourNumber < 20;
+    const isNight = hourNumber >= 20 || hourNumber < 5;  
 
     // Íconos según franja horaria
     if (isNight) {
       if (icon === "cloudy") return <WiNightAltCloudy size={40} color="#94a3b8" />;
       if (icon === "rain") return <WiRain size={40} color="#3b82f6" />;
-      return <WiNightClear size={40} color="#facc15" />; // Luna
+      return <WiNightClear size={40} color="#facc15" />; 
     }
 
     if (isSunrise) {
@@ -46,7 +38,7 @@ const HourlyForecast = () => {
         case "rain":
           return <WiRain size={40} color="#38bdf8" />;
         default:
-          return <WiDaySunny size={40} color="#facc15" />; // Sol
+          return <WiDaySunny size={40} color="#facc15" />;
       }
     }
   };

@@ -13,6 +13,7 @@ const Home = () => {
           <WeatherMain />
         </div>
 
+        {/*Hourly Forecast */}
         <div className={styles.middleSection}>
           <HourlyForecast />
           <AirConditions />
