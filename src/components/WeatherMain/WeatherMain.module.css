@@ -41,3 +41,70 @@
   align-items: center;
   margin-top: -5rem;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .weatherMain {
+    padding: 1.5rem 0.7rem;
+  }
+  
+  .city {
+    font-size: 1.6rem;
+    margin-top: -2rem;
+  }
+  
+  .temperature {
+    font-size: 2.2rem;
+    margin-bottom: -4rem;
+  }
+  
+  .icon {
+    margin-top: -4rem;
+  }
+  
+  .icon svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .weatherMain {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  
+  .city {
+    font-size: 1.4rem;
+    margin-top: -1rem;
+  }
+  
+  .condition {
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .temperature {
+    font-size: 2rem;
+    margin-bottom: 0;
+    order: 1;
+  }
+  
+  .icon {
+    margin-top: 0;
+    order: 2;
+  }
+  
+  .icon svg {
+    width: 70px;
+    height: 70px;
+  }
+}

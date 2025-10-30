@@ -59,3 +59,75 @@
   color: #94a3b8;
   font-weight: 500;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .weeklyForecast {
+    padding: 0.75rem;
+  }
+  
+  .list {
+    gap: 0.4rem;
+  }
+  
+  .item {
+    padding: 0.7rem 0.8rem;
+    min-height: 45px;
+  }
+  
+  .item svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .day {
+    font-size: 0.9rem;
+  }
+  
+  .temp {
+    font-size: 0.9rem;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .weeklyForecast {
+    height: auto;
+    min-height: 300px;
+  }
+  
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .item {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    min-height: 80px;
+  }
+  
+  .item svg {
+    margin: 0.25rem 0;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .day {
+    font-size: 0.85rem;
+    order: 1;
+  }
+  
+  .temp {
+    font-size: 0.85rem;
+    order: 3;
+  }
+  
+  .item svg {
+    order: 2;
+  }
+}

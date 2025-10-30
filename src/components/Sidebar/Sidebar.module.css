@@ -85,3 +85,55 @@
   min-width: 25px;
   min-height: 25px;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    padding: 0.75rem 0rem;
+  }
+  
+  .logo {
+    margin-bottom: 2rem;
+  }
+  
+  .logoIcon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+  
+  .menu {
+    gap: 1.5rem;
+  }
+  
+  .menuItem {
+    padding: 0.6rem 0;
+  }
+  
+  .menuItem svg {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+  }
+  
+  .settings {
+    padding: 0.6rem 0;
+  }
+  
+  .settings svg {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+  }
+}
+
+/* Celular - Ocultar sidebar en móvil (se maneja desde Layout) */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
