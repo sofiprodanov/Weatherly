@@ -12,8 +12,7 @@ Weatherly es una aplicación web de clima interactiva construida con **React**, 
 4. [Estructura del Proyecto](#estructura-del-proyecto)
 5. [Instalación](#instalación)
 6. [Uso](#uso)
-7. [Personalización](#personalización)
-8. [Licencia](#licencia)
+7. [Licencia](#licencia)
 
 ---
 
