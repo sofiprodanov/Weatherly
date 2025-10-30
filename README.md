@@ -39,7 +39,7 @@ Weatherly es una aplicación web de clima interactiva construida con **React**, 
 * **Frontend:** React + Vite
 * **Estilos:** CSS puro
 * **Gestión de estado:** React hooks (`useState`, `useEffect`)
-* **Routing:** React Router
+* **Routing:** React DOM
 * **Data Mock:** Archivos `citiemock` y `citiesMock` para pruebas sin API externa
 * **Deploy:** Vercel
 
@@ -122,6 +122,7 @@ npm run dev
 
 ```bash
 npm run build
+npm run preview
 ```
 
 > Nota: `dist/` y `node_modules/` deberían estar en `.gitignore`.
