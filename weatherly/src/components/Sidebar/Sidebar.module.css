@@ -6,7 +6,7 @@
   background-color: #141c2e;
   border-radius: 16px; 
   padding: 1rem 0.5rem;
-  min-height: 710px;
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
 }
@@ -79,7 +79,6 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Control directo del SVG del ícono de ajustes */
 .settings svg {
   width: 25px;
   height: 25px;

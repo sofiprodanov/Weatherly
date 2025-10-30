@@ -1,6 +1,6 @@
 .layout {
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: auto 1fr;
   background-color: #0b1221;
   color: #fff;
   font-family: "Poppins", sans-serif;
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: fit-content; 
+  height: 100%; 
   border-right: 1px solid #1e2a44; 
 }
 
@@ -32,6 +32,13 @@
   align-items: center;
   margin-bottom: 1.5rem;
   gap: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
 }
 
 .navbarContainer {

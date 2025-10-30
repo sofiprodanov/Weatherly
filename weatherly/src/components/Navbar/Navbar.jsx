@@ -9,7 +9,6 @@ const Navbar = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchRef = useRef(null);
 
-  // Filtrar ciudades basado en la búsqueda
   const filteredCities = cities.filter(city =>
     city.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -29,7 +28,6 @@ const Navbar = () => {
     setShowSuggestions(true);
   };
 
-  // Cerrar sugerencias al hacer click fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -56,7 +54,6 @@ const Navbar = () => {
           onFocus={handleInputFocus}
         />
         
-        {/* Dropdown de sugerencias */}
         {showSuggestions && searchTerm && (
           <div className={styles.suggestions}>
             {filteredCities.length > 0 ? (

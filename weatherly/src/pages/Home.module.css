@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1.5rem;
-  height: 100vh; 
+  height: 100%; 
   align-items: start;
 }
 
@@ -30,8 +30,13 @@
   flex: 1; 
 }
 
-.middleSection > section {
-  flex: 1; 
+.middleSection > :first-child { /* HourlyForecast */
+  flex: 1.2; 
+  min-height: 0; 
+}
+
+.middleSection > :last-child { /* AirConditions */
+  flex: 1;
   min-height: 0; 
 }
 
