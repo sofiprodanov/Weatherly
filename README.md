@@ -22,23 +22,23 @@ Weatherly es una aplicación web de clima interactiva construida con **React**, 
 * Dashboard principal con resumen del clima por ciudad.
 * Búsqueda por localidad.
 * Sidebar con categorías y navegación clara.
-* Tarjetas interactivas con efecto **flip 3D**.
+* Tarjetas interactivas.
 * Iconos dinámicos de clima según condiciones (sol, lluvia, nieve, nublado, etc.).
-* Horarios y pronósticos por hora (Hourly Forecast).
+* Horarios y pronósticos por hora.
 * Diseño responsivo, moderno y minimalista.
 
 ---
 
 ## Demo
 
-> Puedes ver el proyecto en [Vercel](#) (link a tu deploy).
+> Puedes ver el proyecto en [Vercel](#).
 
 ---
 
 ## Tecnologías
 
 * **Frontend:** React + Vite
-* **Estilos:** CSS puro (centralizado en `style.css`)
+* **Estilos:** CSS puro
 * **Gestión de estado:** React hooks (`useState`, `useEffect`)
 * **Routing:** React Router
 * **Data Mock:** Archivos `citiemock` y `citiesMock` para pruebas sin API externa
