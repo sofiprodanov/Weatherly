@@ -1,5 +1,6 @@
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
+import { WeatherProvider } from "./context/WeatherContext";
 import "./styles/globals.css";
 
 /**
@@ -7,9 +8,11 @@ import "./styles/globals.css";
  */
 function App() {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+     <WeatherProvider>
+      <Layout>
+        <Home />
+      </Layout>
+    </WeatherProvider>
   );
 }
 

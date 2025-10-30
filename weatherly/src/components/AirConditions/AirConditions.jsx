@@ -1,9 +1,10 @@
 import styles from "./AirConditions.module.css";
 import { WiRaindrop, WiHumidity, WiStrongWind, WiThermometer } from "react-icons/wi";
-import { airConditionsMock } from "../../data/airConditionsMock";
+import { useWeather } from "../../context/WeatherContext";
 
 const AirConditions = () => {
-  const { feels_like, humidity, wind_speed, rain_probability } = airConditionsMock;
+  const { selectedCity } = useWeather();
+  const { feels_like, humidity, wind_speed, rain_probability } = selectedCity.air;
 
   return (
     <section className={styles.airConditions}>
@@ -47,3 +48,4 @@ const AirConditions = () => {
 };
 
 export default AirConditions;
+

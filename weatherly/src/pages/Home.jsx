@@ -6,13 +6,20 @@ import WeeklyForecast from "../components/WeeklyForecast/WeeklyForecast";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div className={styles.homeContent}>
+      {/*Contenido principal */}
       <div className={styles.leftColumn}>
-        <WeatherMain />
-        <HourlyForecast />
-        <AirConditions />
+        <div className={styles.topSection}>
+          <WeatherMain />
+        </div>
+
+        <div className={styles.middleSection}>
+          <HourlyForecast />
+          <AirConditions />
+        </div>
       </div>
 
+      {/*Weekly Forecast */}
       <div className={styles.rightColumn}>
         <WeeklyForecast />
       </div>

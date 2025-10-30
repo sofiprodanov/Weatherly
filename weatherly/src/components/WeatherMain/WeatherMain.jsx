@@ -1,11 +1,17 @@
 import styles from "./WeatherMain.module.css";
-import { citiesMock } from "../../data/citiesMock";
-import { SunnyIcon, CloudyIcon, RainyIcon, WindyIcon } from "./icons";
+import { SunnyIcon, CloudyIcon, RainyIcon, WindyIcon, SnowyIcon, StormIcon, HotThermometerIcon, ColdThermometerIcon } from "./Icons";
+import { useWeather } from "../../context/WeatherContext";
 
 const WeatherMain = () => {
-  const weatherData = citiesMock[4];
+  const { selectedCity } = useWeather();
+  const weatherData = selectedCity;
 
-  const renderWeatherIcon = (icon) => {
+  const renderWeatherIcon = (icon, temperature) => {
+    // Casos especiales por temperatura
+    if (temperature < 1) return <SnowyIcon />;
+    if (temperature >= 1 && temperature <= 12) return <ColdThermometerIcon />;
+
+    // Íconos SVG segun condicion
     switch (icon) {
       case "cloudy":
         return <CloudyIcon />;
@@ -13,6 +19,12 @@ const WeatherMain = () => {
         return <RainyIcon />;
       case "windy":
         return <WindyIcon />;
+      case "snow":
+        return <SnowyIcon />;
+      case "storm":
+        return <StormIcon />;
+      case "sunny":
+        return temperature > 30 ? <HotThermometerIcon /> : <SunnyIcon />;
       default:
         return <SunnyIcon />;
     }
@@ -30,7 +42,7 @@ const WeatherMain = () => {
       <div className={styles.bottom}>
         <span className={styles.temperature}>{weatherData.temperature}°</span>
         <div className={styles.icon}>
-          {renderWeatherIcon(weatherData.icon)}
+          {renderWeatherIcon(weatherData.icon, weatherData.temperature)}
         </div>
       </div>
     </section>

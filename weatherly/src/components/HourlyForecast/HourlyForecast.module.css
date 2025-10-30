@@ -15,9 +15,10 @@
 
 .list {
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   overflow-x: auto;
   scrollbar-width: auto;
+  padding: 0.5rem 0;
 }
 
 .item {
