@@ -1,9 +1,17 @@
 import styles from "./AirConditions.module.css";
 import { WiRaindrop, WiHumidity, WiStrongWind, WiThermometer } from "react-icons/wi";
 import { useWeather } from "../../context/WeatherContext";
+import LoadingSpinner from "../UI/LoadingSpinner";
+import ErrorMessage from "../UI/ErrorMessage";
 
 const AirConditions = () => {
-  const { selectedCity } = useWeather();
+  const { selectedCity, isLoading, error } = useWeather();
+
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage message={error.message} />;
+  if (!selectedCity) return <ErrorMessage message="No hay ciudad seleccionada" />;
+  if (!selectedCity.air) return <ErrorMessage message="Datos de aire no disponibles" />;
+
   const { feels_like, humidity, wind_speed, rain_probability } = selectedCity.air;
 
   return (

@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import { useWeather } from "../../context/WeatherContext";
 
 const Navbar = () => {
-  const { changeCity, cities } = useWeather();
+  const { changeCity, cities, isLoading } = useWeather();
   const [searchTerm, setSearchTerm] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchRef = useRef(null);
@@ -47,14 +47,15 @@ const Navbar = () => {
         <FiSearch className={styles.icon} />
         <input
           type="text"
-          placeholder="Buscar provincia o localidad..."
+          placeholder={isLoading ? "Cargando..." : "Buscar provincia o localidad..."}
           className={styles.input}
           value={searchTerm}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
+          disabled={isLoading} 
         />
-        
-        {showSuggestions && searchTerm && (
+
+        {showSuggestions && searchTerm && !isLoading && ( 
           <div className={styles.suggestions}>
             {filteredCities.length > 0 ? (
               filteredCities.map((city) => (

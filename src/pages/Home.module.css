@@ -93,3 +93,21 @@
     min-height: auto;
   }
 }
+
+/*Estado de carga y error*/
+.loadingContainer,
+.errorContainer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+/* Celular*/
+@media (max-width: 768px) {
+  .loadingContainer,
+  .errorContainer {
+    min-height: 300px;
+  }
+}

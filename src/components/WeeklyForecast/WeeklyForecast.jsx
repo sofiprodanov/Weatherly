@@ -1,9 +1,18 @@
 import styles from "./WeeklyForecast.module.css";
 import { WiDaySunny, WiCloudy, WiRain, WiStrongWind, WiSnow } from "react-icons/wi";
 import { useWeather } from "../../context/WeatherContext";
+import LoadingSpinner from "../UI/LoadingSpinner";
+import ErrorMessage from "../UI/ErrorMessage";
+
 
 const WeeklyForecast = () => {
-  const { selectedCity } = useWeather();
+  const { selectedCity, isLoading, error } = useWeather();
+
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage message={error.message} />;
+  if (!selectedCity) return <ErrorMessage message="No hay ciudad seleccionada" />;
+  if (!selectedCity.weeklyForecast) return <ErrorMessage message="Pronóstico semanal no disponible" />;
+
   const weeklyForecast = selectedCity.weeklyForecast;
 
   const renderIcon = (icon) => {

@@ -1,27 +1,43 @@
 import { createContext, useContext, useState } from "react";
-import { citiesMock } from "../data/citiesMock";
+import { useWeatherData, useCities } from "../hooks/useWeather";
 
 const WeatherContext = createContext();
 
 export const WeatherProvider = ({ children }) => {
-  const [selectedCity, setSelectedCity] = useState(citiesMock[0]);
+  const [selectedCityName, setSelectedCityName] = useState("Resistencia");
+  
+  // React Query para obtener datos del clima
+  const { 
+    data: selectedCity, 
+    isLoading, 
+    error,
+    isFetching 
+  } = useWeatherData(selectedCityName);
+
+  // React Query para obtener lista de ciudades
+  const { data: cities = [] } = useCities();
 
   const changeCity = (cityName) => {
-    const newCity = citiesMock.find((city) => city.city === cityName);
-    if (newCity) setSelectedCity(newCity);
+    setSelectedCityName(cityName);
   };
-
-  const availableCities = citiesMock.map(city => city.city);
 
   return (
     <WeatherContext.Provider value={{ 
       selectedCity, 
       changeCity,
-      cities: availableCities
+      cities,
+      isLoading: isLoading || isFetching,
+      error
     }}>
       {children}
     </WeatherContext.Provider>
   );
 };
 
-export const useWeather = () => useContext(WeatherContext);
+export const useWeather = () => {
+  const context = useContext(WeatherContext);
+  if (!context) {
+    throw new Error("useWeather debe usarse dentro de WeatherProvider");
+  }
+  return context;
+};

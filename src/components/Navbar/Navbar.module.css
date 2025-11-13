@@ -82,27 +82,6 @@
   font-style: italic;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  color: #ffd166;
-  font-size: 1.8rem;
-  font-weight: 700;
-  white-space: nowrap;
-  flex: 0 0 auto;
-  margin-left: auto;
-  margin-right: 7rem;
-}
-
-.logoText {
-  background: linear-gradient(135deg, #ffd166, #facc15);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
 /* ===== DISEÑO RESPONSIVO ===== */
 
 /* Tablet */

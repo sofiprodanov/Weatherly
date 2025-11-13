@@ -1,9 +1,39 @@
+import { useState } from "react";
 import styles from "./WeatherMain.module.css";
 import { SunnyIcon, CloudyIcon, RainyIcon, WindyIcon, SnowyIcon, StormIcon, HotThermometerIcon, ColdThermometerIcon } from "./Icons";
 import { useWeather } from "../../context/WeatherContext";
+import LoadingSpinner from "../UI/LoadingSpinner";
+import ErrorMessage from "../UI/ErrorMessage";
+import { useUpdateWeatherPreference } from "../../hooks/useWeather";
 
 const WeatherMain = () => {
-  const { selectedCity } = useWeather();
+  const { selectedCity, isLoading, error } = useWeather();
+  const [isFavorite, setIsFavorite] = useState(false);
+  const { mutate: toggleFavorite, isPending } = useUpdateWeatherPreference();
+
+  const handleToggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+
+    toggleFavorite({
+      cityName: selectedCity.city,
+      preferences: { isFavorite: !isFavorite }
+    }, {
+      onSuccess: (data) => {
+        console.log("✅ useMutation éxito:", data);
+      },
+      onError: (error) => {
+        console.error("❌ useMutation error:", error);
+        setIsFavorite(isFavorite);
+        alert("Error al guardar favorito");
+      }
+    });
+  };
+
+  // Estados de carga y error
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage message={error.message} />;
+  if (!selectedCity) return <ErrorMessage message="No hay ciudad seleccionada" />;
+
   const weatherData = selectedCity;
 
   const renderWeatherIcon = (icon, temperature) => {
@@ -33,9 +63,19 @@ const WeatherMain = () => {
   return (
     <section className={styles.weatherMain}>
       <div className={styles.top}>
-        <h2 className={styles.city}>
-          {weatherData.city}, {weatherData.province}
-        </h2>
+        <div className={styles.cityHeader}>
+          <h2 className={styles.city}>
+            {weatherData.city}, {weatherData.province}
+            <button
+              onClick={handleToggleFavorite}
+              disabled={isPending}
+              className={styles.favoriteBtn}
+              title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
+            >
+              {isFavorite ? "★" : "☆"}
+            </button>
+          </h2>
+        </div>
         <p className={styles.condition}>{weatherData.condition}</p>
       </div>
 
