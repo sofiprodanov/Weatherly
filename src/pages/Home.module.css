@@ -44,12 +44,6 @@
   flex: 0 0 auto;
 }
 
-.rightColumn > section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 /* ===== DISEÑO RESPONSIVO  ===== */
 
 /* Tablet */
